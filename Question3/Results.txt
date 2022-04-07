@@ -1,0 +1,23 @@
+As with the previous question, a patient's BMI does not appear to have a statistically significant correlation to ER visits. There
+also appear to be only a handful of overweight patients, (114/39,237 in the ER data set), so no conclusions can be drawn from BMI which
+combines height and weight.
+
+By state, I looked at the percentage on ErEvents, defined as where the study performed at the ER was true in the data.
+Looking at the total ErEvents compared to all of the events total IL,OH and IN seemed to all have around 14.8% of their total statewide events
+taking place in the ER. FL and MI ranked higher when looking by state, having a little more than twice the rate of ER visits as a %
+of all total visits, coming in at around 32.8% for FL and 32.9% or MI. There seems to be a correlation between MI and FL having more ER
+visits, and I would suggest more investigation from data scientists and or my team of data analysts as to why if presented with this.
+There could be confounding factors, like age, which I will analyze next. The results are available in ErEventsByState.csv
+
+Looking at only ERImaging events across age groups and across states, it's fairly consistent to find that a larger percentage of patients
+using the ER for care across all states is relatively consistent in the 30-35% range for the 70+ age cohort. 34.1% for FL,39.1% in unmappable zips,
+34.7% in OH, 34.2% in MI, 31.9% in IL and 34.1% in IN. See ErEventsByAgeState.csv.
+
+Looking at the total number of patients in the study by age alone, we find that the total number of patients compared to the number of Er Events is
+roughly consistent, around 20% of visits across all age cohorts were ER events. So it doesn't look like age alone correlates with the number of events,
+so really the strongest correlation here is by state, and in this case it seems like there is something going on in FL and MI compared
+to the other states in the study. The biggest concern seeing this data would be to figure out what might be causing this, between the practices done
+in the other states. Ohio is off the hook for this one! MI and IN are leading the pack in ER visits, and we should get ER visits down as
+ER costs are very expensive. Interventions to help patients seek these procedures in community settings in MI and IL are in order.
+
+
