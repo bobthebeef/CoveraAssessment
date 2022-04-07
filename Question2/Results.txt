@@ -7,3 +7,9 @@ I looked at the total number of patients who appeared for a repeat image in each
 Across all age groups, roughly 3.4-3.6% of patients appeared for a repeat image.
 
 See PatientsByBMI and PatientsByAge csv's in the Question 2 folder for the data output.
+
+State appears to be highly correlative. Here we find that OH, which was identified as a problem area in question 1, also has the greatest number of repeats as a percentage of the total study events.
+OH has the hughest number of raw repeats by state as well. I would really want to dig into what's going on in OH, as they seem to be an area where the community setting is not much better than the 
+hospital setting, and that would be concerning in a real world scenario.
+
+These results can be found in the RepeatsByState.csv
