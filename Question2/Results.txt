@@ -1,0 +1,9 @@
+High BMI does not correlate with repeat imaging. I got a minor issue that I didn't resolve with BMI, I think it has to do with typecasting
+around the join using the BETWEEN operator, but the BETWEEN operator SHOULD BE inclusive, so there is an issue there that I ignored as it was a small
+amount of data, 94 rows total out of 7,194 total patients that had 2 study events.
+
+Age, surprisingly, also does not appear to be correlative. While more patients over age 70 appeared for a repeat image, there was also a LOT more patients over the age of 70 in the study.
+I looked at the total number of patients who appeared for a repeat image in each age group, divided by the total number of patients and multipled by 100 to see a weighted score by age
+Across all age groups, roughly 3.4-3.6% of patients appeared for a repeat image.
+
+See PatientsByBMI and PatientsByAge csv's in the Question 2 folder for the data output.

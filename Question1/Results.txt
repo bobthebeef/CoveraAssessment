@@ -1,0 +1,14 @@
+In general, it appears that overall the community settings, defined as IsHospital=0 and no other qualifiers, 
+downstream costs are lower in the community settings (This is also my answer for number 4, but will respond in turn there when I get to it).
+
+Regionally, there do appear to be some differences (see CommunityversusHospital.csv), we see about a 6% savings across non-unknown states 
+(marginal amount of data that had a zip code that didn't map back to a state in my source of truth for the zip code dimension), with the notable exception of Ohio (OH).
+There are 5 known states in this data set where studies are taking place: IN,OH,FL, MI and IL.
+
+IN, FL and IL are performing very well with over a 6% savings across these regions. MI is doing marginally better than the hospital setting,
+with a 0.88 savings in the total downstream cost per event. The unknown data is too small to draw conclusions from.
+
+From this data, I would determine that there is correlation between the geographical areas of OH and MI that indicate that 
+the community settings there are not performing as well as hospitals, and use that as a springboard for deeper investigation as to why.
+For example, patient age could play a role. In this high level summary with the data available, we should direct resources towards the regions of
+OH and MI to determine why the community setting is not producing the roughly 6.6% savings that IN,IL and FL are producing.
