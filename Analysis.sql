@@ -135,6 +135,7 @@ group by AgeGroup
 SELECT a.AgeGroup,a.Patients TotalPatients,b.Patients RepeatPatients,100.0*CAST(b.Patients AS DECIMAL(18,4))/CAST(a.Patients AS DECIMAL(18,4)) WeightedAgeScore FROM TotalPatientsByAge a
 INNER JOIN RepeatImagingByAge b
 ON A.AgeGroup=b.AgeGroup
+--PatientsByAge.csv
 
 DROP TABLE IF EXISTS dbo.TotalStudyEventsByState
 SELECT CASE WHEN b.state IS NULL THEN 'UNK' ELSE b.State END State,count(1) TotalStudyEvents
@@ -152,11 +153,14 @@ INTO dbo.RepeatImagingByState
 FROM dbo.RepeatImaging a
 GROUP BY State
 
+select * FROM RepeatImagingByState
+
 SELECT a.State,a.RepeatsByState,b.TotalStudyEvents,100.0*(CAST(RepeatsByState AS DECIMAL(18,4))/CAST(TotalStudyEvents AS DECIMAL(18,4))) WeightedAverage 
 FROM RepeatImagingByState a
 INNER JOIN TotalStudyEventsByState b
 ON a.State=b.State
 ORDER BY WeightedAverage
+--RepeatsByState.csv
 
 --Question 3 features associated with emergency room setting
 DROP TABLE IF EXISTS dbo.ErImaging
@@ -261,5 +265,24 @@ FROM ErEventsByAge a
 INNER JOIN TotalEventsByAge b
 ON a.AgeGroup=b.AgeGroup
 
+--Question 4
+
+SELECT * FROM dbo.StudyData_Cleansed
+WHERE IsHospital=1
+--104572
+
+SELECT * FROM dbo.StudyData_Cleansed
+WHERE IsHospital=0
+--89372
+
+--Get average downstream cost per event for each setting
+
+SELECT sum(cost)/89372 FROM dbo.StudyData_Cleansed
+WHERE IsHospital=0
+--Average downstream cost 3,942
+
+SELECT sum(cost)/104572 FROM dbo.StudyData_Cleansed
+WHERE IsHospital=1
+--4,033
 
 

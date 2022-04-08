@@ -1,0 +1,13 @@
+In the investigation for Question 1, it certainly seemed to be the case that the community setting produced fewer downstream costs when
+looking at the state/region level. Looking across the aggregate, by taking the sum of the cost for all hospital events and dividing by 
+the number of total IsHospital=1 events, we get an average hospital downstream cost of 4033.
+
+Looking across IsHospital=0 events, we see 89,372 events. Summing up the cost across all of those and dividing by the number of records,
+we get $3,942. Community as a result is better, marginally across all regions. We know that in general hospital visits are more costly, and patients going to hospitals
+for these procedures are probably incurring more costs.
+
+As we saw in Part 1 though, region mattered a lot. OH and MI need further investigation to determine why the studies were not performing as well there,
+and the other states in the study had a 6% savings rate for community, compared to the overall rate of (4033-3942)/4033=2.26%, and other less performing states
+had hospitals actually being slightly lower in cost, but the savings was really not statistically significant. I have placed another copy of
+CommunityVersusHospital.csv in the Question 4 folder to show this, and the overall rate was just a simple calculation above.
+
